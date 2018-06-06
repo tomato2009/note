@@ -1,0 +1,132 @@
+### 1 nginx 配置多个tomcat实体
+
+
+
+#### 1.1 一台主机上配置多台tomcat
+
+##### 1.1.1 解压两个tomcat1 和 tomcat1
+
+~~~shel
+tar -zxvf apache-tomcat-8.5.30.tar.gz
+cp apache-tomcat-8.5.30 tomcat1
+mv apache-tomcat-8.5.30 tomcat2
+~~~
+
+
+
+修改两个tomcat的配置文件 conf\server.xml 文件
+
+~~~shel
+分别将<Server port="8005" shutdown="SHUTDOWN">修改成：
+<Server port="10005" shutdown="SHUTDOWN">
+<Server port="20005" shutdown="SHUTDOWN">
+
+~~~
+
+~~~shell
+分别将<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />修改成：
+
+<Connector port="10009" protocol="AJP/1.3" redirectPort="10043" />
+
+<Connector port="20009" protocol="AJP/1.3" redirectPort="20043" />
+
+~~~
+
+
+
+~~~shel
+<Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" />
+修改成
+<Connector port="8081" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="10043"/>
+<Connector port="8082" protocol="HTTP/1.1" connectionTimeout="20000"  redirectPort="20043" />
+~~~
+
+
+
+分别启动两个实例，然后访问成功表明两个tomcat正常启动。
+
+
+
+#### 1.2 配置Nginx 反向代理
+
+找到Nginx的安装路径/user/local/nginx
+
+修改配置文件
+
+sbin/nginx.conf
+
+~~~shel
+upstream tomcatserver1 {  
+    server 192.168.72.49:8081;  
+    }  
+upstream tomcatserver2 {  
+    server 192.168.72.49:8082;  
+    }  
+server {  
+        listen       80;  
+        server_name  8081.max.com;  
+  
+        #charset koi8-r;  
+  
+        #access_log  logs/host.access.log  main;  
+  
+        location / {  
+            proxy_pass   http://tomcatserver1;  
+            index  index.html index.htm;  
+        }       
+    }  
+server {  
+        listen       80;  
+        server_name  8082.max.com;  
+  
+        #charset koi8-r;  
+  
+        #access_log  logs/host.access.log  main;  
+  
+        location / {  
+            proxy_pass   http://tomcatserver2;  
+            index  index.html index.htm;  
+        }          
+    }  
+~~~
+
+
+
+其中8081.max.com、8082.max.com是客户端访问的路径
+
+在本地host文件中配置增加如下代码:C:\Windows\System32\drivers\etc\hosts
+
+~~~shell
+192.168.72.49 8081.max.com
+192.168.72.49 8082.max.com
+~~~
+
+
+
+重启或启动Nginx
+
+~~~shel
+启动 nginx安装目录下的 sbin/nginx
+./nginx
+
+或重启
+./nginx -s reload
+~~~
+
+
+
+#### 1.3 访问
+
+直接输入
+
+192.168.72.49
+
+或
+
+8081.max.com
+
+或
+
+8082.max.com
+
+nginx会自动转发请求到tomcat服务器
