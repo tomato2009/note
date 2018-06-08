@@ -47,23 +47,27 @@ http://192.168.1.201:8081/nexus
 
 本地第三方jar一般放到 3r party仓库下
 
-![20171030103625201](E:\note\maven\pic\20171030103625201.png)
+
+
+![20171030103625201.png](https://github.com/tomato2009/note/blob/master/maven/pic/20171030103625201.png?raw=true)
+
+
 
 
 
 点击3rd party，可以查看该仓库下的所有包Browser Storage， 点击Artifact Upload上传包
 
-![20171030101058439](E:\note\maven\pic\20171030101058439.png)
+![20171030101058439.png](https://github.com/tomato2009/note/blob/master/maven/pic/20171030101058439.png?raw=true)
 
 
 
-![20171030103725977](E:\note\maven\pic\20171030103725977.png)
+![20171030103725977.png](https://github.com/tomato2009/note/blob/master/maven/pic/20171030103725977.png?raw=true)
 
 
 
 上传后可以查看到包
 
-![20180608093214](E:\note\maven\pic\20180608093214.png)
+![20180608093214.png](https://github.com/tomato2009/note/blob/master/maven/pic/20180608093214.png?raw=true)
 
 
 
