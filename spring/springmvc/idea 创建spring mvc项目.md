@@ -6,17 +6,15 @@ typora-root-url: pic
 
 ##### 1 创建项目
 
+![springmvc_20180611160524.png](https://github.com/tomato2009/note/blob/master/spring/springmvc/pic/springmvc_20180611160524.png?raw=true)
+
+![springmvc20180611160604.png](https://github.com/tomato2009/note/blob/master/spring/springmvc/pic/springmvc20180611160604.png?raw=true)
+
+![springmcv_20180611160645.png](https://github.com/tomato2009/note/blob/master/spring/springmvc/pic/springmcv_20180611160645.png?raw=true)
 
 
-![springmvc_20180611160524](../../../maven/pic/springmvc_20180611160524.png)
 
 
-
-![springmvc20180611160604](../../../maven/pic/springmvc20180611160604.png)
-
-
-
-![springmcv_20180611160645](../../../maven/pic/springmcv_20180611160645.png)
 
 
 
@@ -138,27 +136,31 @@ WEB-INF下创建jsp 目录，并创建文件 hello.jsp
 
 ##### 4 配置tomcat
 
-![springmvc_20180611162409](../../../maven/pic/springmvc_20180611162409.png)
+![springmvc_20180611162409.png](https://github.com/tomato2009/note/blob/master/spring/springmvc/pic/springmvc_20180611162409.png?raw=true)
 
 
 
-![springmvc_20180611162621](../../../maven/pic/springmvc_20180611162621.png)
+![springmvc_20180611162621.png](https://github.com/tomato2009/note/blob/master/spring/springmvc/pic/springmvc_20180611162621.png?raw=true)
 
 
 
-![springmvc20180611162710](../../../maven/pic/springmvc20180611162710.png)
+![springmvc20180611162710.png](https://github.com/tomato2009/note/blob/master/spring/springmvc/pic/springmvc20180611162710.png?raw=true)
+
+
 
 
 
 #####5 点击项目构建，在`Problem`中点击`fix`,添加所需的`jar`文件到工程中 
 
-![20161122182640369](../../../maven/pic/20161122182640369.png)
+![20161122182640369.png](https://github.com/tomato2009/note/blob/master/spring/springmvc/pic/20161122182640369.png?raw=true)
+
+
 
 
 
 #####6 项目结构
 
-![springmvc_20180611163224](../../../maven/pic/springmvc_20180611163224.png)
+![springmvc_20180611163224.png](https://github.com/tomato2009/note/blob/master/spring/springmvc/pic/springmvc_20180611163224.png?raw=true)
 
 
 
