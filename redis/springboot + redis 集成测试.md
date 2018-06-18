@@ -1,5 +1,13 @@
 ### springboot + redis 集成测试
 
+项目地址
+
+~~~htt
+https://github.com/tomato2009/spring/tree/master/spring-redis/springboot-redis-01
+~~~
+
+
+
 #### 1 springboot中redis相关配置
 
 #####1.1 在pom中配置redis的相关依赖包 
