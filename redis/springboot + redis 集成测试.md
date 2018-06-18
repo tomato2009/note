@@ -299,15 +299,17 @@ class Person {
 
 一共测试了：对于string类型的存取，对于object类型的存取，对于list类型的存取，其实本质都是转成了json字符串。还有就是根据key来执行remove操作。
 
-![QQ截图20180618172457](D:\workspace\note\redis\pic_springboot-redis-01\QQ截图20180618172457.png)
+![QQæªå¾20180618172457.png](https://github.com/tomato2009/note/blob/master/redis/pic_springboot-redis-01/QQ%E6%88%AA%E5%9B%BE20180618172457.png?raw=true) 
 
 
 
- 
+![QQæªå¾20180618172607.png](https://github.com/tomato2009/note/blob/master/redis/pic_springboot-redis-01/QQ%E6%88%AA%E5%9B%BE20180618172607.png?raw=true) 
 
- ![QQ截图20180618172607](D:\workspace\note\redis\pic_springboot-redis-01\QQ截图20180618172607.png)
 
- ![QQ截图20180618172619](D:\workspace\note\redis\pic_springboot-redis-01\QQ截图20180618172619.png)
+
+![QQæªå¾20180618172619.png](https://github.com/tomato2009/note/blob/master/redis/pic_springboot-redis-01/QQ%E6%88%AA%E5%9B%BE20180618172619.png?raw=true) 
+
+
 
  
 
