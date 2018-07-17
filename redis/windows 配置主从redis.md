@@ -8,8 +8,9 @@
 * 可选：把 redis-server.exe redis.windows6380.conf 配置为服务 
 
 
+#####2 ，更改**从redis**的配置文件： 
 
-#####2 ，更改**从redis**的配置文件：redis.windows6380.conf 
+redis.windows6380.conf
 
 * 更改**主从配置**的参数：
 
